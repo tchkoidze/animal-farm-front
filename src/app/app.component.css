@@ -1,0 +1,36 @@
+.napoleon {
+  display: flex;
+  justify-content: center;
+}
+
+.animal-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+ul {
+  list-style: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+  margin-top: 70px; /* Removes default margin */
+}
+
+.animal-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
