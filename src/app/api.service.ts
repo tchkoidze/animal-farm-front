@@ -20,4 +20,8 @@ export class ApiService {
   getAnimals(): Observable<any> {
     return this.http.get<any>(this.baseUrl); // Fetch data
   }
+
+  feedAnimal(id: number): Observable<any> {
+    return this.http.post(`${this.baseUrl}/${id}/feed`, {}); // POST request
+  }
 }

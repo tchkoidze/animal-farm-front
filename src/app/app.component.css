@@ -1,6 +1,12 @@
 .napoleon {
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.napoleon-alternative {
+  width: 181px;
+  height: 278px;
 }
 
 .animal-container {
@@ -13,6 +19,7 @@
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  position: relative;
 }
 
 ul {
@@ -33,4 +40,50 @@ ul {
   width: 100%;
   box-sizing: border-box;
   padding: 0 10px;
+}
+
+.food-animation {
+  position: absolute;
+  width: 50px; /* Adjust size */
+  height: 50px;
+  animation: moveFood 1s linear forwards;
+  right: 50%;
+  top: 70%;
+  /* transform: translate(-50%, -50%);
+  transition: transform 1s linear, opacity 0.5s ease-in-out;
+  z-index: 10;
+  transition: left 1s ease, top 1s ease;
+  pointer-events: none; */
+  /* *ngIf="showFoodAnimation" */
+}
+
+.thanks-animation {
+  position: absolute;
+  font-size: 16px;
+  font-weight: bold;
+  color: green;
+  animation: fadeOut 1s linear forwards;
+  transform: translateY(-20px);
+}
+
+@keyframes moveFood {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(100px, 100px); /* Adjust based on UI */
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
 }
