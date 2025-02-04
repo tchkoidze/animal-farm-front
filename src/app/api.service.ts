@@ -14,7 +14,7 @@ export class ApiService {
   }
 
   feedAnimal(id: number): Observable<any> {
-    return this.http.post(`${this.baseUrl}/${id}/feed`, {}); // POST request
+    return this.http.post(`${this.baseUrl}/animals/${id}/feed`, {}); // POST request
   }
 
   getBidzinaStatus() {
