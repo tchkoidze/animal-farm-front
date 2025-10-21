@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class ApiService {
-  "private baseUrl = 'http://localhost:3000/api';"
+  //private baseUrl = 'http://localhost:3000/api';
   private baseUrl = 'https://animal-farm-back-1.onrender.com/api';
 
   constructor(private http: HttpClient) {}
